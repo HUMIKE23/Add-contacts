@@ -1,0 +1,15 @@
+<form method="post" action="{{ url_for('update_contact', pk=contact.id) }}">
+    {{ form.csrf_token }}
+    <p>
+        <label for="First_name">First_name</label>
+        <input type="text" name="First_name" value="{{ contact.First_name }}"> <br>
+        <label for="Last_name">Last_name</label>
+        <input type="text" name="Last_name" value="{{ contact.Last_name }}"> <br>
+        <label for="Email">Email</label>
+        <input type="text" name="Email" value="{{ contact.Email }}"> <br>
+        <label for="Phone">Phone</label>
+        <input type="text" name="Phone" value="{{ contact.Phone }}"> <br>
+        <button type="submit">Update</button>
+    </p>
+
+</form>

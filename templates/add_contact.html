@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <form method="post" action="">
+            {{ form.hidden_tag() }}
+            {{ form.csrf_token }}
+
+            <label for="First_name">Firstname</label>
+            {{form.First_name}} <br>
+            <label for="Last_name">Lastname</label>
+            {{form.Last_name}} <br>
+            <label for="Email">Email</label>
+            {{form.Email}} <br>
+            <label for="Phone">Phone</label>
+            {{form.Phone}} <br>
+            {{form.Submit}}
+        </form>
+        <a href="{{ url_for('home')}}">Back to Contact List</a>
+    </div>
+</body>
+</html>

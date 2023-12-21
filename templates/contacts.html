@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>AVAILABLE CONTACTS</h1>
+        <h3><a href="{{ url_for('add_contact')}}">Add Contact</a></h3>
+        {% for contact in contacts %}
+        <li>{{contact.First_name}} {{contact.Last_name}}</li>
+        <p>
+            <a href="{{ url_for('update_contact', pk=contact.id) }}">Edit Contact</a>
+            <a href="{{ url_for('delete_contact', pk=contact.id) }}">Delete Contact</a>
+        </p>
+        <hr>
+        {% endfor %}
+        
+    </div>
+
+
+</body>
+</html>
